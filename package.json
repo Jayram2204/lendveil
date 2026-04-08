@@ -1,0 +1,13 @@
+{
+  "name": "confidential-underwriting-api",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api dev",
+    "build:web": "pnpm --filter web build",
+    "build:api": "pnpm --filter api build",
+    "lint:web": "pnpm --filter web lint",
+    "check:api": "pnpm --filter api typecheck"
+  }
+}

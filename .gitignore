@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# build output
+.next
+dist
+coverage
+
+# environment
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+
+# system
+.DS_Store
+
+# solana / anchor
+.anchor
+target
+.vercel

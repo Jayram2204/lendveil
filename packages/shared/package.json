@@ -1,0 +1,8 @@
+{
+  "name": "@underwriting/shared",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./underwriting": "./src/underwriting.ts"
+  }
+}
