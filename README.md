@@ -72,42 +72,14 @@ lendveil/
 
 ### "Data Flow Architecture"
 
-┌─────────────┐         ┌──────────────┐         ┌─────────────┐
-│   Borrower  │────────▶│  Next.js UI  │────────▶│  Fastify    │
-│  Dashboard  │         │   (apps/web) │         │   API       │
-└─────────────┘         └──────────────┘         └──────┬──────┘
-     │
-     ▼
-┌────────────────────────────────────┐
-│        BullMQ Job Queue            │
-│  (Async Underwriting Processing)   │
-└───────────┬────────────────────────┘
-            │
-            ▼
-┌────────────────────────┐
-│   Arcium TEE Enclave   │
-│ (Confidential Compute) │
-└───────────┬────────────┘
-            │
-            ▼
-┌────────────────────────┐
-│   Solana Program       │
-│ (Decision Anchoring)   │
-└────────────────────────┘
+
+<img width="514" height="401" alt="image" src="https://github.com/user-attachments/assets/9c6aae30-dd1d-43d6-a64f-52b51d947722" />
 
 
 ### Key Components
 
-| Component | Technology | Purpose |
 
-| Frontend             | Next.js 14, TypeScript, Tailwind CSS | User interfaces for borrowers and lenders |
-| Backend API          | Fastify, Drizzle ORM, PostgreSQL     | Application logic, persistence, job orchestration 
-| Job Queue            | BullMQ, Redis                        | Async processing of underwriting computations |
-| Confidential Compute | Arcium TEE                           | Private credit score generation |
-| Smart Contracts      | Anchor, Rust                         | On-chain decision anchoring and settlement |
-| Database             | PostgreSQL 16                        | Relational data persistence |
-| Cache/Queue          | Redis 7                              | Session management and job queuing |
-
+<img width="848" height="204" alt="image" src="https://github.com/user-attachments/assets/3150050e-e602-41bd-8b60-155e30c14ec5" />
 
 
 ## Technology Stack
