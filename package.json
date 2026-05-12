@@ -1,13 +1,25 @@
 {
-  "name": "confidential-underwriting-api",
+  "name": "lendveil",
   "private": true,
-  "packageManager": "pnpm@10.0.0",
-  "scripts": {
+  "packageManager": "pnpm@10.33.2",
+  "scripts"
+  : {
     "dev:web": "pnpm --filter web dev",
     "dev:api": "pnpm --filter api dev",
+    "build": "pnpm build:types && pnpm build:api && pnpm build:web",
     "build:web": "pnpm --filter web build",
     "build:api": "pnpm --filter api build",
+    "build:types": "pnpm --filter @lendveil/types build",
+    "test": "pnpm check:types && pnpm check:api",
     "lint:web": "pnpm --filter web lint",
-    "check:api": "pnpm --filter api typecheck"
+    "check:api": "pnpm --filter api typecheck",
+    "check:types": "pnpm --filter @lendveil/types typecheck"
+  },
+  "pnpm": {
+    "overrides": {
+      "@solana/web3.js": "1.98.4",
+      "react": "18.2.0",
+      "react-dom": "18.2.0"
+    }
   }
 }

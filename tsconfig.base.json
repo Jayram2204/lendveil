@@ -13,9 +13,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
     "paths": {
-      "@underwriting/shared/*": ["packages/shared/src/*"]
+      "@lendveil/types": ["./packages/types/src/index.ts"],
+      "@lendveil/types/*": ["./packages/types/src/*"],
+      "@underwriting/shared/*": ["./packages/shared/src/*"]
     }
   }
 }

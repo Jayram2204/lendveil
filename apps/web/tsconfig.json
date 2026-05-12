@@ -5,7 +5,13 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@lendveil/types": ["../../packages/types/src/index.ts"],
+      "@lendveil/types/*": ["../../packages/types/src/*"],
+      "@underwriting/shared/*": ["../../packages/shared/src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",

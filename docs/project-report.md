@@ -1,10 +1,10 @@
-# Confidential Underwriting API
+# Lendveil
 
 ## Project Report
 
 ### 1. Executive Summary
 
-Confidential Underwriting API is a decisioning layer for Solana applications that need to evaluate borrower eligibility without collecting or exposing raw sensitive user data.
+Lendveil is a decisioning layer for Solana applications that need to evaluate borrower eligibility without collecting or exposing raw sensitive user data.
 
 The product enables a borrower to present verifiable attestations, run underwriting logic through confidential computation, and return only the outputs a protocol needs to act on:
 
@@ -30,7 +30,7 @@ Current onboarding is also fragmented. Users repeatedly re-submit sensitive docu
 
 ### 3. Proposed Solution
 
-Confidential Underwriting API introduces a reusable underwriting flow:
+Lendveil introduces a reusable underwriting flow:
 
 1. A borrower connects a wallet and presents attestations from approved issuers.
 2. The application verifies attestation validity, issuer trust, and expiry.
@@ -81,7 +81,7 @@ User story:
 
 - A borrower wants access to a lending pool with better terms than a fully collateralized loan.
 - The borrower presents approved attestations such as KYC status, jurisdiction, accreditation, or income band.
-- Confidential Underwriting API evaluates the borrower privately.
+- Lendveil evaluates the borrower privately.
 - The lending protocol receives:
   - Eligible or not eligible
   - Risk band
@@ -120,7 +120,7 @@ Most hackathon products in this space will likely fall into one of these categor
 - Privacy middleware without a clear buyer
 - New lending protocols with small feature differences
 
-Confidential Underwriting API is different because:
+Lendveil is different because:
 
 - It targets a concrete buyer: Solana financial applications
 - It solves a direct business problem: private credit decisioning
@@ -377,13 +377,13 @@ What judges will want to see:
 
 Today, private lending and RWA applications on Solana face a bad tradeoff. If they collect sensitive user data, they become compliance and security liabilities. If they avoid collecting it, they cannot underwrite users properly and leave institutional capital on the table.
 
-We built Confidential Underwriting API, a decisioning layer for Solana finance. Users present verifiable attestations from trusted issuers. Our system evaluates those inputs through confidential computation and returns only what the protocol needs: eligibility, risk band, maximum borrow amount, and collateral requirements.
+We built Lendveil, a decisioning layer for Solana finance. Users present verifiable attestations from trusted issuers. Our system evaluates those inputs through confidential computation and returns only what the protocol needs: eligibility, risk band, maximum borrow amount, and collateral requirements.
 
 This means applications can make better credit decisions without exposing raw user identity or financial data.
 
 We are starting with private undercollateralized lending, but the same infrastructure can power RWA access, OTC credit, and compliant onchain finance more broadly.
 
-Confidential Underwriting API helps unlock capital-efficient, privacy-preserving financial products on Solana.
+Lendveil helps unlock capital-efficient, privacy-preserving financial products on Solana.
 
 ### 22. Immediate Build Priorities
 
@@ -406,6 +406,6 @@ The MVP is successful if:
 
 ### 24. Final Positioning
 
-Confidential Underwriting API is not another lending protocol, not another identity wallet, and not a speculative privacy primitive.
+Lendveil is not another lending protocol, not another identity wallet, and not a speculative privacy primitive.
 
 It is a product that helps Solana financial applications make private, verifiable, and actionable credit decisions.

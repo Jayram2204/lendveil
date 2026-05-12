@@ -1,23 +1,51 @@
-# Confidential Underwriting API
+# Lendveil
 
-Monorepo for a Solana-native confidential underwriting product focused on private credit decisions.
+Lendveil is a Solana-native confidential underwriting product focused on private credit decisions for lending and RWA applications.
 
 ## Workspace Layout
 
-- `apps/web` - Next.js product surface and demo UI
-- `apps/api` - decisioning service and integration layer
-- `packages/shared` - shared types and schemas
-- `programs/underwriting` - Anchor workspace for onchain decision references
-- `docs` - product and build documentation
+- `apps/web` - Next.js borrower and lender dashboards
+- `apps/api` - Fastify API, Drizzle persistence, Arcium integration scaffolding, and queue processing
+- `packages/types` - shared underwriting policy and API types
+- `programs/underwriting` - Solana Anchor workspace for future decision anchoring
+- `docs` - product, policy, and phase documentation
+- `config` - issuer trust configuration
 
-## Getting Started
+## Working Commands
 
-1. Install dependencies with `pnpm install`
-2. Run the web app with `pnpm dev:web`
-3. Run the API with `pnpm dev:api`
+- `pnpm build`
+- `pnpm test`
+- `pnpm dev:web`
+- `pnpm dev:api`
+- `pnpm build:types`
+- `pnpm build:api`
+- `pnpm build:web`
 
-## Deployment Notes
+## Environment
 
-- Deploy `apps/web` as its own project with the root directory set to `apps/web`
-- Deploy `apps/api` separately as a backend service
-- Deploy the Anchor program through Solana tooling, not through the web or API host
+1. Copy `.env.template` to `.env.local`
+2. Fill in Postgres, Redis, Solana, and optional Arcium values
+
+## Local Infrastructure
+
+`docker-compose.yml` includes:
+- Postgres
+- Redis
+- API container
+- Web container
+
+## Current State
+
+What is real now:
+- shared policy/types package
+- borrower and lender web routes
+- Drizzle-backed API persistence
+- BullMQ underwriting queue
+- Arcium preparation and local encryption/decryption flow
+- exact dependency versions locked in manifests
+
+What is still incomplete:
+- real SAS schema parsing instead of account-exists-only validation
+- real MXE submission and result retrieval
+- real onchain Anchor instruction wiring for decision anchoring
+- automated unit/integration test suite beyond command-level verification

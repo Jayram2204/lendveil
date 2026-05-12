@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-04-09T00:00:00Z",
+  "status": "LOCKED_FOR_MVP",
+  "issuers": [
+    {
+      "name": "Reclaim Protocol - Official KYC Provider",
+      "public_key": "TBD_reclaim_kyc_pubkey",
+      "schemas_issued": ["kyc_status", "income_band"],
+      "trusted": true,
+      "added_date": "2026-04-09",
+      "documentation": "https://docs.reclaimprotocol.org"
+    },
+    {
+      "name": "Solana Attestation Service - Jurisdiction Provider",
+      "public_key": "TBD_sas_jurisdiction_pubkey",
+      "schemas_issued": ["jurisdiction", "accreditation_status"],
+      "trusted": true,
+      "added_date": "2026-04-09",
+      "documentation": "https://attest.solana.com/"
+    }
+  ]
+}
